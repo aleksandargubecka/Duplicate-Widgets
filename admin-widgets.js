@@ -1,6 +1,8 @@
 (function ($) {
     if (!window.Ag) window.Ag = {};
 
+    	console.log(ag_duplicate_widgets);
+
     Ag.CloneWidgets = {
         // Initialize
         init: function () {
