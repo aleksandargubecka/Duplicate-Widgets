@@ -32,7 +32,7 @@ if (!function_exists('ag_enqueue_duplicate_widgets_script')):
         if ($pagenow != 'widgets.php')
             return;
 
-        wp_enqueue_script('ag_duplicate_widgets_script', plugin_dir_url(__FILE__) . '/admin-widgets.js', array('jquery'), false, true);
+        wp_enqueue_script('ag_duplicate_widgets_script', plugin_dir_url(__FILE__) . '/ag-widgets.js', array('jquery'), false, true);
 
         wp_localize_script('ag_duplicate_widgets_script', 'ag_duplicate_widgets', array(
             'text' => __('Clone', 'ag-duplicate-widgets'),
