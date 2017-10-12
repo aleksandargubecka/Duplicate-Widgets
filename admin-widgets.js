@@ -107,6 +107,4 @@
     };
 
     $(Ag.CloneWidgets.init);
-
-    $("#herald-child-category-posts-order").sortable();
 })(jQuery);
