@@ -1,8 +1,6 @@
 (function ($) {
     if (!window.Ag) window.Ag = {};
 
-    	console.log(ag_duplicate_widgets);
-
     Ag.CloneWidgets = {
         // Initialize
         init: function () {
@@ -53,10 +51,16 @@
 
             var newnum = highest + 1;
 
-            $widget.find('.widget-content').find('input,select,textarea').each(function () {
+            $widget.find('.widget-content label,input,select,textarea').each(function () {
+                var replace_what = mnumber > 0 ? mnumber : number;
                 if ($(this).attr('name')) {
-                    var replace_what = mnumber > 0 ? mnumber : number;
                     $(this).attr('name', $(this).attr('name').replace(replace_what, newnum));
+                }
+                if ($(this).attr('id')) {
+                    $(this).attr('id', $(this).attr('id').replace(replace_what, newnum));
+                }
+                if ($(this).attr('for')) {
+                    $(this).attr('for', $(this).attr('for').replace(replace_what, newnum));
                 }
             });
 
@@ -70,12 +74,10 @@
             });
             var newid = highest + 1;
 
-            // Figure out the value of add_new from the source widget:
-            var add = $('#widget-list .id_base[value="' + idbase + '"]').siblings('.add_new').val();
-
             $widget[0].id = 'widget-' + newid + '_' + idbase + '-' + newnum;
             $widget.find('input.widget-id').val(idbase + '-' + newnum);
             $widget.find('input.widget_number').val(newnum);
+            $widget.find('input.widget-control-save').removeAttr('disabled').val('Save');
             $widget.hide();
             $original.after($widget);
             $widget.fadeIn();
@@ -98,6 +100,8 @@
                 $tmceActive.parent().html('<textarea id="e_' + timeStamp + '_text">' + textAreaValue + '</textarea>');
                 wp.editor.initialize('e_' + timeStamp + '_text', {tinymce: true, quicktags: true});
                 $('#e_' + timeStamp + '_text').addClass('widefat text wp-editor-area');
+                $widget.find('.text-widget-fields > p label').attr('for', 'e_' + timeStamp + '_title');
+                $widget.find('.text-widget-fields > p input').attr('id', 'e_' + timeStamp + '_title');
             }
             wpWidgets.save($widget, 0, 0, 1);
 
