@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Duplicate Widgets
- * Version: 1.1
+ * Version: 1.2
  * Plugin URI: https://github.com/aleksandargubecka
  * Description: Easily duplicate or clone a widget with all of its settings in just one click.
  * Author: aleksandargubecka

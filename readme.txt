@@ -2,8 +2,8 @@
 Contributors: aleksandargubecka
 Tags: duplicate widgets, clone, duplicate widget plugin, widget clone, widget duplicator
 Requires at least: 3.7
-Tested up to: 4.8
-Stable tag: 1.0.2
+Tested up to: 4.9
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -24,7 +24,7 @@ Simple plugin that lets you duplicate your existing widgets in just one click. I
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.2.0 =
 * Added support for WordPress 4.9
 * Fixed small issues
 
