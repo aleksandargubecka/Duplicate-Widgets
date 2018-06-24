@@ -4,7 +4,7 @@
  * Version: 1.2
  * Plugin URI: https://github.com/aleksandargubecka
  * Description: Easily duplicate or clone a widget with all of its settings in just one click.
- * Author: aleksandargubecka
+ * Author: themesfactory
  * Author URI: https://github.com/aleksandargubecka/Duplicate-Widgets
  * Text Domain: duplicate-widget
  * Domain Path: /languages/
